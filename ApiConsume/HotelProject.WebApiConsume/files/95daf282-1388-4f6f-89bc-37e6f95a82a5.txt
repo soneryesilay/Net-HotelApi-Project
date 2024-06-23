@@ -1,0 +1,19 @@
+GRAFİK VE ANİMASYON 2
+---------------------
+KREDİ = 2,5
+AKTS = 4,0
+
+
+AÇIK KAYNAK İŞLETİM SİSTEMİ
+---------------------------
+KREDİ = 2,0
+AKTS = 3,0
+
+
+OFİS YAZILIMLARI
+----------------
+KREDİ = 3,5
+AKTS = 4,0
+
+
+

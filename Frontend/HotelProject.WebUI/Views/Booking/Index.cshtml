@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+
+@await Component.InvokeAsync("_HeadPartialComponent")
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        @await Component.InvokeAsync("_SpinnerPartailComponent")
+
+        @await Component.InvokeAsync("_NavbarPartialComponent")
+
+        @await Component.InvokeAsync("_BookingCoverPartialComponent")
+
+@*         @await Component.InvokeAsync("_BookingPartialComponent")
+ *@
+        <partial name="AddBooking.cshtml"/>
+        <partial name="/Views/Default/_SubscribePartialComponent.cshtml" />
+
+        @await Component.InvokeAsync("_FooterPartialComponent")
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    @await Component.InvokeAsync("_ScriptsPartialComponent")
+</body>
+
+</html>

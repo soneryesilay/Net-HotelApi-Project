@@ -1,0 +1,45 @@
+﻿@model List<HotelProject.WebUI.Dtos.AppUserDto.ResultAppUserListDto>
+@{
+    ViewData["Title"] = "UserList";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning">
+        Kullanıcı verisi bulunamadı.
+    </div>
+}
+else
+{
+    <table class="table table-xs mb-0">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Ad Soyad</th>
+                <th>Şehir</th>
+                <th>Durum</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.Name @item.Surname</td>
+                    <td>@item.City</td>
+                    <td>@item.Country</td>
+                    <td>@item.Gender</td>
+                    <td><i class="fa fa-circle-o text-success  mr-2"></i> Aktif</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+<a href="/Register/Index/" class="btn btn-primary">Yeni Kullanıcı Kaydı</a>
+
+
